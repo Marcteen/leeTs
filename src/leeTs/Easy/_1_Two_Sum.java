@@ -7,6 +7,7 @@ public class _1_Two_Sum {
 		int[] result = twoSum(nums, target);
 		System.out.println(String.format("The result is [%d, %d], %d + %d = %d", result[0], result[1], nums[result[0]], nums[result[1]], nums[result[0]] + nums[result[1]]));
 	}
+	
 	public static int[] twoSum(int[] nums, int target) {
 		int[] targetIndex = new int[2];
 		for(int i = 1; i < nums.length; i ++) {
