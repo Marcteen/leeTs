@@ -1,6 +1,6 @@
 package leeTs.Hard;
 
-public class _4_Median_of_Two_Sorted_Arrays {
+public class u_4_Median_of_Two_Sorted_Arrays {
 	public static void main(String[] args) {
 		
 	}
@@ -13,7 +13,7 @@ public class _4_Median_of_Two_Sorted_Arrays {
 			former = num2;
 			latter = num1;
 			if(num1[0] < num2[num2.length - 1])
-				if(num1[num1.length - 1] <] num2[num2.length - 1])// num1 is within num2
+				if(num1[num1.length - 1] < num2[num2.length - 1])// num1 is within num2
 					joint = 3;
 				else//part of num1 is within num2
 					joint = 2;
@@ -45,7 +45,6 @@ public class _4_Median_of_Two_Sorted_Arrays {
 		case 2://part of latter is in former
 			int latterHeadinFormer = findPosition(former, latter[0]);
 			int fomerEndinLatter = findPosition(latter, former[former.length - 1]);
-			
 		case 3://latter is within former	
 		}
 		return result;
