@@ -25,17 +25,22 @@ public class _24_Swap_Nodes_in_Pairs {
 				ListNode pre = hat;
 				ListNode mid = head;
 				ListNode front = head.next;
-				while(null != front.next) {
+				while(null != front && null != front.next) {
 					pre.next = front;
 					mid.next = front.next;
 					front.next = mid;
 					pre = mid;
 					mid = mid.next;
-					front = mid.next;
+					if(null != mid.next)// in case that only one element left
+						front = mid.next;
+					else
+						front = null;
 				}
-				pre.next = front;
-				mid.next = front.next;
-				front.next = mid;
+				if(null != front) {
+					pre.next = front;
+					mid.next = front.next;
+					front.next = mid;
+				}
 				return hat.next;
 			}
 	}
