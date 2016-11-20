@@ -2,7 +2,7 @@ package leeTs.Easy;
 
 public class _101_Symmetric_Tree {
 	
-	public static class TreeNode {
+	public class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;
@@ -15,6 +15,8 @@ public class _101_Symmetric_Tree {
 	}
 
 	public static boolean isSymmetric(TreeNode root) {
+		if(null == root)
+			return true;
 		if(null == root.left || null == root.right) {
 			if(root.left == root.right)
 				return true;
