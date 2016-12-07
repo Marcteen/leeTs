@@ -4,15 +4,16 @@ public class _202_Happy_Number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int input = 2;
+		boolean i = isHappy(input);
 	}
 
-	public boolean isHappy(int n) {
-		int sum = 0;
-		int a = 0;
-		int ta = 0;
-		int b = 0;
-		while(n != 1) {
+	public static boolean isHappy(int n) {
+		long sum = 0;
+		long a = 0;
+		long ta = 0;
+		long b = 0;
+		while(1 != sum) {
 			sum = 0;
 			while(0 != n) {
 				sum *= 10;
@@ -24,7 +25,6 @@ public class _202_Happy_Number {
 			a = ta;
 			if( (a & ~b) == sum)// find the only number that occur two times
 				return false;
-			n = sum;
 		}
 		return true;
 	}
