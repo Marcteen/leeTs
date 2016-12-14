@@ -1,5 +1,4 @@
 package leeTs.Easy;
-import java.util.ArrayDeque;
 
 public class _168_Excel_Sheet_Column_Title {// StringBuffer can append() a charactor
 
@@ -11,7 +10,9 @@ public class _168_Excel_Sheet_Column_Title {// StringBuffer can append() a chara
 
 	public static String convertToTitle(int n) {
 		StringBuffer result = new StringBuffer();
+		int curValue = 0;
 		while(n > 0) {
+			curValue = n % 26;
 			result.insert(0, (char)(n % 26 + 'A' - 1));
 			n /= 26;
 		}
