@@ -88,7 +88,7 @@ public class _202_Happy_Number {
 			b = (~a & ~b & nums[i]) | (~a & b & ~nums[i]);
 			a = ta;
 			if( (a & ~b) == nums[i]) {// find the only number that occur two times
-				System.out.println("天了噜");
+				System.out.println("澶╀簡鍣�");
 				System.out.println(String.format("%d to %d", (a & ~b), nums[i]));
 			}
 		}
