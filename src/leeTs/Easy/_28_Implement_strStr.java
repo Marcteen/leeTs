@@ -3,10 +3,8 @@ package leeTs.Easy;
 public class _28_Implement_strStr { // way too slow, maybe try other advanced methods
 
 	public static void main(String[] args) {
-		String haystack = "askaskfaskkdfkddfaskfaskkfaskfaaaaaaskfaskkff";
-		String needle = "aaaaaaskfaskkff";
-		int result = strStr(haystack, needle);
-		System.out.println(String.format("The result is %d", result));
+		String needle = "abcabcabcabc";
+		int[] nextval = getNextVal(needle);
 	}
 	public static int strStr(String haystack, String needle) {
         int j = 0;
@@ -39,7 +37,7 @@ public class _28_Implement_strStr { // way too slow, maybe try other advanced me
 				if(-1 == k || needle.charAt(j) == needle.charAt(k)) {
 					//nextval[++j] = ++k; the skip problem if p[++j] == p[++k]
 					if( needle.charAt(++j) == needle.charAt(++k)) // skipping avoid more useless step
-						nextval[j] = nextval[k];
+						nextval[j] = nextval[k];// noted that this step won't change the value of k!!!
 					else
 						nextval[j] = k;
 				}
