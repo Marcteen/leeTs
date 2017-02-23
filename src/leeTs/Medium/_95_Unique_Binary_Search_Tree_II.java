@@ -1,6 +1,7 @@
 package leeTs.Medium;
 
 import java.util.List;
+import java.util.LinkedList;
 import java.util.ArrayList;
 
 public class _95_Unique_Binary_Search_Tree_II {
@@ -8,6 +9,7 @@ public class _95_Unique_Binary_Search_Tree_II {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<TreeNode> result = generateTrees(3);
+		LinkedList<Integer> a = new LinkedList<>();
 	}
 
 	public static List<TreeNode> generateTrees(int n) {
