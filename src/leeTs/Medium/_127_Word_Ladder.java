@@ -45,7 +45,7 @@ public class _127_Word_Ladder {
                         }
                     }
                     //Don't forget to recover it when switch to another char in the string !!!!!!
-                    buff[i] = (char)(c + 'a');
+                    buff[i] = (char)(c + 'a');// actually it is one step from it origin
                 }
             }
             beginSet = temp;

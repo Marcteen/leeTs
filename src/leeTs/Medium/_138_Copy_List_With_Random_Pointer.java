@@ -10,7 +10,7 @@ public class _138_Copy_List_With_Random_Pointer {
 	}
 	/* we can also use map to copy all node in head first, then do the connect of
 	next and random pointer. The other way is just append the new node right behind
-	its origin, then do the connext and extraction*/
+	its origin, then do the random connect and extraction*/
 	public RandomListNode copyRandomList(RandomListNode head) {
         if(null == head)
             return null;

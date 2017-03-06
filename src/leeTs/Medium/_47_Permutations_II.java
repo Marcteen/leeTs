@@ -71,8 +71,16 @@ public class _47_Permutations_II {
             result.add(new ArrayList<Integer>(permutation));// need copy, and List is not cloneable, though ArrayList is cloneable.
         else {
             for(int i = 0; i < nums.length; i ++) {// because order matter in permutation, scan all everytime
-                if(i > 0 && nums[i] == nums[i - 1] && taken.get(i - 1) || taken.get(i))
-                    continue;// In this way, the duplicated element can only be load in one order, so if we take the first dup in kth layer, when backtrace to it, there is no way that it can take another dup (which will cause inunique permutation).
+                /*because the duplicate elements are adjacent, and we don't keep track of the element that
+                 * already has been used by this layer, if we found nums[i] == nums[i - 1], there may be
+                 * two case: the former are used by last layer or use by itself.For the second case,
+                 * taken.get(i - 1) must be false, otherwise, we can take it just because we didn't use
+                 * this value in former iteration. We don't continue when i == 0 because it is the beginning of the layer,
+                 * no value used at all. And last, if taken.get(i) is not true, we can use it.*/
+            	if(i > 0 && nums[i] == nums[i - 1] && taken.get(i - 1) || taken.get(i))
+                    continue;/*In this way, the duplicated element can only be load in one order, so if we take
+                    the first dup in kth layer, when backtrace to it, there is no way that it can take another
+                    dup (which will cause inunique permutation).*/
                     taken.set(i);
                     permutation.add(nums[i]);
                     permute(nums, taken, permutation, result);

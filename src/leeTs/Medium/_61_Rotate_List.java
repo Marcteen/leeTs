@@ -27,6 +27,7 @@ public class _61_Rotate_List {
             }
             if(0 != k) {
                 for(newHead = head; null != tailSeeker.next; newHead = newHead.next, tailSeeker = tailSeeker.next);
+                
                 tailSeeker.next = head;
                 head = newHead.next;
                 newHead.next = null;

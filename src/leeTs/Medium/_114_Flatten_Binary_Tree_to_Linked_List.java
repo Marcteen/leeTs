@@ -44,9 +44,8 @@ public class _114_Flatten_Binary_Tree_to_Linked_List {
         LinkedList<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         /*Think about it in recursion, for the node root, if it has left child,
-        its right must point to it left child, or if it has right child, its
-        right must point to it right child, otherwise, its right must point to
-        the nearest ancestor's right child.*/
+        its right pointer must point to it left child, or if it has right child, it
+        must be appended, otherwise, its right must point to the nearest ancestor's right child.*/
         while(!stack.isEmpty()) {
             root = stack.pop();
         /*according to the description above, we have the following push order*/

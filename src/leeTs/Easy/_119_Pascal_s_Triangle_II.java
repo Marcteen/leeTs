@@ -1,7 +1,7 @@
 package leeTs.Easy;
 import java.util.ArrayList;
 import java.util.List;
-public class _118_Pascal_s_Triangle_II {
+public class _119_Pascal_s_Triangle_II {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

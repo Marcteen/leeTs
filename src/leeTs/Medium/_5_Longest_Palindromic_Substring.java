@@ -1,4 +1,4 @@
-package leeTs.Easy;
+package leeTs.Medium;
 
 public class _5_Longest_Palindromic_Substring {
 

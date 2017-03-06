@@ -1,4 +1,4 @@
-package leeTs.Easy;
+package leeTs.Medium;
 
 public class _24_Swap_Nodes_in_Pairs {
 	public static class ListNode {

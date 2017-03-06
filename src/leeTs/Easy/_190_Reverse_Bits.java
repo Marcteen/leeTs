@@ -4,7 +4,7 @@ public class _190_Reverse_Bits {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println(Integer.toBinaryString(-34));
 	}
 
 	public int reverseBits(int n) {

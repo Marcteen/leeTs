@@ -8,12 +8,13 @@ public class _153_Find_Minimum_in_Rotated_Sorted_Array {
 	}
 
 	public int findMin(int[] nums) {
-        //In case that there is only on element
+        //In case that there is only one element
         if(nums[0] <= nums[nums.length - 1])
             return nums[0];
         int low = 0, high = nums.length - 1, mid = 0;
         while(low < high) {
             mid = low + (high - low) / 2;
+            // in this case, low must locate at the min value
             if(nums[low] <= nums[mid] && nums[mid] < nums[high]) {
                break;
             }
@@ -25,7 +26,7 @@ public class _153_Find_Minimum_in_Rotated_Sorted_Array {
             else if(nums[mid] > nums[high])
                 low = mid + 1;
         }
-        //don't mistake the
+        //don't mistake the index and the corresponding value
         return nums[low];
     }
 }

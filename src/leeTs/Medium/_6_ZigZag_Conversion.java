@@ -1,4 +1,4 @@
-package leeTs.Easy;
+package leeTs.Medium;
 
 public class _6_ZigZag_Conversion {
 	public static void main(String[] args) {
