@@ -5,7 +5,8 @@ public class __475_Heaters {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int a = -2;
+		System.out.println(Integer.toBinaryString(a) + " " + Integer.toBinaryString(a >> 1) + " " + Integer.toBinaryString(a >>> 4));		
 	}
 
 	public int findRadius(int[] houses, int[] heaters) {

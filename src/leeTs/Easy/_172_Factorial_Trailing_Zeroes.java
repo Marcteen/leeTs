@@ -15,7 +15,7 @@ public class _172_Factorial_Trailing_Zeroes {
 		 * 5, but for 5^m, it only provide one more 5 because we have
 		 * count it in 5^(m - 1), just like n / 5 + n / 25 + n / 125 + ...,
 		 * but here we let n /= 5 (decrease the dividend) in each iteration
-		 * to get the same result as increasing the divisor*/
+		 * to get the same resultas increasing the divisor*/
 		while(n > 0) {
 			result += n / 5;
 			n /= 5;
