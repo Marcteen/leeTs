@@ -4,9 +4,10 @@ public class _62_Unique_Path {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println(uniquePaths(9, 9));
 	}
 	// using dp, the "right and down" constrain make it very easy to slove
-	public int uniquePaths(int m, int n) {
+	public static int uniquePaths(int m, int n) {
         int[] dp = new int[m];// use for each col's number of path, swipe it from right to left
         for(int i = 0; i < m; i++)
             dp[i] = 1;
