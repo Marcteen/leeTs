@@ -10,6 +10,8 @@ public class _207_Course_Schedule {
 		int[][] input = new int[][]{{1, 0}};
 		System.out.println(canFinish(2, input));
 	}
+	
+	
 	//follow the concept shown here https://www.cs.usfca.edu/~galles/visualization/TopoSortIndegree.html
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
         if(numCourses < 2)

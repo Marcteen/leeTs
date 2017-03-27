@@ -49,9 +49,11 @@ public class _204_Count_Primes {
 			for(int i = 3; i * i < n; i += 2) {// skip the evens which are surely not primes !
 				if(notPrime[i])// the potential sequence must have been processed
 					continue;
-				else {
-					for(int j = i * i; j < n; j += 2 * i) {// skip the evens
-						if(!notPrime[j]) { // check whether it is necessary, to be correct.
+				/*say if a odds is tagged as not a prime, it sequence must have benn processed*/
+				else {// at first, all the odds are tagged as prime(notPrime[i] == false)
+					for(int j = i * i; j < n; j += 2 * i) {// the evens are not in consideration at first
+						/*j (a number in the seuqence) cannot be a prime for it has some other factors*/
+						if(!notPrime[j]) { // check whether it is necessary, to be correct for result --.
 							notPrime[j] = true;
 							result --;
 						}
