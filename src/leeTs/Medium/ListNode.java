@@ -1,7 +1,7 @@
 package leeTs.Medium;
 
 public class ListNode {
-	int val = 0;
-	ListNode next;
-	ListNode(int x) {val = x;}
+	public int val = 0;
+	public ListNode next;
+	public ListNode(int x) {val = x;}
 }
