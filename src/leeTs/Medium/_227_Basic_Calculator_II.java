@@ -17,7 +17,8 @@ public class _227_Basic_Calculator_II {
         LinkedList<Integer> stack = new LinkedList<>();
         /*we handle current operator util we meet next*/
         char sign = '+';
-        for(int i = 0; i < s.length(); i ++) {
+        // the equal is for the tailing blankspace
+        for(int i = 0; i <= s.length(); i ++) {
             for(; i < s.length() && Character.isDigit(s.charAt(i)); i ++) {
                 number = number * 10 + s.charAt(i) - '0';
             }
