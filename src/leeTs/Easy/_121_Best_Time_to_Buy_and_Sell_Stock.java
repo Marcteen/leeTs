@@ -11,7 +11,7 @@ public class _121_Best_Time_to_Buy_and_Sell_Stock {
         int cur = 0, max = 0;
         /*the transaction of buy at i and sell at j can be
         done buy and sell from i to j step by step, and the
-        difference in this way(prices[i] - prices[i]) forms
+        difference in this way(prices[i] - prices[i-1]) forms
         any max subarray sum problem.*/
         for(int i = 1; i < prices.length; i ++) {
             /*cur will increase or some k day the minus profit

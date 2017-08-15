@@ -6,7 +6,10 @@ public class _5_Longest_Palindromic_Substring {
 		// TODO Auto-generated method stub
 
 	}
-
+	/*Or we can use dp, generating the palindrome substring indicator
+	 * dp[from][to] by growing the length of them*/
+	
+	
 	public static String longestPalindrome(String s) {
         int curLength = 0;
         String longest = "";

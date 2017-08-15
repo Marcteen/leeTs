@@ -45,7 +45,7 @@ public class _68_Text_Justification {
                 builder.append(words[last ++]);
                 count --;
                 /*if we can't divide numSpaces evenly, we can just
-                evenly put reminder to the last part of the line!!!!*/
+                evenly put reminder to the left part of the line!!!!*/
                 reminder = numSpaces % count;
                 interval = numSpaces / count;
                 spaces = new char[interval];

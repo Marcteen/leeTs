@@ -35,7 +35,8 @@ public class _11_Container_With_Most_Water {
     		if(area > maxArea)
     			maxArea = area;
     		/*As Buckets effect reveals, the capacity of a bucket depends
-    		 * on the shortest board, so , we HAVE to move the shortest side.*/
+    		 * on the shortest board, so , we HAVE to move the shortest side,
+    		 * otherwise we don't have a chance to expand it*/
     		if(height[head] < height[tail])
     			head ++;
     		else

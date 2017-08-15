@@ -1,13 +1,13 @@
 package leeTs.Medium;
 
 public class _151_Reverse_Words_in_a_String {
-	// I don't think it is normal to hide the requirement about removing redundent blank space, fuck leetcode
+	// I don't think it is normal to hide the requirement about removing redundant blank space, fuck leetcode
     public String reverseWords(String s) {
         if(null == s || 0 == s.length())
             return s;
         char[] result = deBlankSpace(s).toCharArray();
         reverseString(result, 0, result.length - 1);
-        for(int start = 0, end = 0; end < result.length;) {// aready remove redundent blank space, much easier
+        for(int start = 0, end = 0; end < result.length;) {// already remove redundant blank space, much easier
             while(end < result.length && ' ' != result[end])
                 end ++;
             reverseString(result, start, end - 1);

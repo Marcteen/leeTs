@@ -16,7 +16,7 @@ public class _139_Word_Break {
         if(wordSet.contains(s))
             return true;
         int length = s.length();
-        boolean[] breakable = new boolean[length + 1];// upper bound excluded
+        boolean[] breakable = new boolean[length + 1];// lower bound excluded
         breakable[0] = true;
         for(int end = 0; end < length; end ++) {
             for(int start = 0; start <= end; start ++){

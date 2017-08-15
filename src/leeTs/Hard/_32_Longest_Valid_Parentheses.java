@@ -7,9 +7,9 @@ public class _32_Longest_Valid_Parentheses {
 		// TODO Auto-generated method stub
 
 	}
-	/*dp solution(tc for the last pure '(' string); we can also use a stack traceing index in string, if
+	/*dp solution(tc for the last pure '(' string); we can also use a stack tracing index in string, if
 	 * the next char is compatible with the top element in stack, they will
-	 * be deminished as pair, otherwise kept in stack, finally the span in
+	 * be diminished as pair, otherwise kept in stack, finally the span in
 	 * the remaining stack give the result, and it will be empty if the whole
 	 * string is the solution*/
 	public int longestValidParenthesesStack(String s) {

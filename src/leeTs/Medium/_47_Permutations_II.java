@@ -75,17 +75,20 @@ public class _47_Permutations_II {
                  * already has been used by this layer, if we found nums[i] == nums[i - 1], there may be
                  * two case: the former are used by last layer or use by itself.For the second case,
                  * taken.get(i - 1) must be false, otherwise, we can take it just because we didn't use
-                 * this value in former iteration. We don't continue when i == 0 because it is the beginning of the layer,
+                 * this value in former iteration in this layer. We don't continue(skip it) when i == 0 because it is the beginning of the layer,
                  * no value used at all. And last, if taken.get(i) is not true, we can use it.*/
             	if(i > 0 && nums[i] == nums[i - 1] && taken.get(i - 1) || taken.get(i))
                     continue;/*In this way, the duplicated element can only be load in one order, so if we take
-                    the first dup in kth layer, when backtrace to it, there is no way that it can take another
-                    dup (which will cause inunique permutation).*/
+                    the first dup in kth layer, when backtrack to it, there is no way that it can take another
+                    dup (which will cause duplicated permutation).*/
                     taken.set(i);
                     permutation.add(nums[i]);
                     permute(nums, taken, permutation, result);
                     taken.clear(i);
                     permutation.remove(permutation.size() - 1);
+                    /*if nums[i] == nums[i - 1], taken.get(i - 1) == false and i > 0, we have already use
+                     * nums[i] in this layer, and this rule is sufficient to skip all duplicated number
+                     * in sorted array! And finally, it is permutation, not a combination!!!*/
             }
         }
     }

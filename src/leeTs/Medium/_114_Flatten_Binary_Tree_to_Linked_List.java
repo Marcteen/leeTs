@@ -17,18 +17,22 @@ public class _114_Flatten_Binary_Tree_to_Linked_List {
             return;
         flat(root, null);
     }
-    /*the next need to be apped to the tail of subtree who's root
+	/*New: understand it as to form a list stands for the pre-order traverse*/
+    /*the next need to be appended to the tail of subtree who's root
     is "root"*/
     public static void flat(TreeNode root, TreeNode next) {
         if(null != root.right)
         /*flatten the right, the near ancestor's right must be
         appended to it*/
+        	/*New: in pre-eorder, its ancestor's right subtree will always be places
+             * behind its own right subtree!!*/
             flat(root.right, next);
         if(null != root.left) {
             TreeNode right = root.right;
             root.right = root.left;
-            /*it it has no right, child, the nearest ancestor's right is to be
+            /*it it has no right child, the nearest ancestor's right is to be
             appended*/
+            /*New: in pre-order, its own right subtree always behind its left subtree*/
             flat(root.left, right == null ? next : right);
             root.left = null;
         }
